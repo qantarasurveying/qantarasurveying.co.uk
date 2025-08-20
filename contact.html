@@ -410,6 +410,20 @@
             transform: translateY(0);
         }
     </style>
+	<!-- Google reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- reCAPTCHA Validation -->
+    <script>
+        function validateRecaptcha() {
+            var response = grecaptcha.getResponse();
+            if (response.length === 0) {
+                alert("Please verify that you are not a robot.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -437,8 +451,7 @@
             <h2 class="section-title" style="color: white;">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/mzzvqndk" method="POST">
-                        <!-- Redirect after submission -->
+                    <form action="https://formspree.io/f/mzzvqndk" method="POST" onsubmit="return validateRecaptcha();">
                         <input type="hidden" name="_next" value="file:///D:/qs_website/thank-you.html">
 
                         <div class="form-group">
@@ -453,11 +466,17 @@
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone">
                         </div>
-                            <div class="form-group">
+                        <div class="form-group">
                             <label for="project">Project Details</label>
                             <textarea id="project" name="project" placeholder="Tell us about your project requirements..."></textarea>
                         </div>
-                            <button type="submit" class="submit-btn">Send Message</button>
+
+                        <!-- Google reCAPTCHA Widget -->
+                        <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="6LffyawrAAAAAOpBy4Mnz6EQb6fVMiYBhsRzdu9m"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
 
 
