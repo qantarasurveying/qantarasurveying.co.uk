@@ -223,6 +223,52 @@
                 transition: all 0.3s ease;
             }
         }
+		
+		@media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .about-text h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-text p {
+                font-size: 1rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .about-image {
+                padding: 1.5rem;
+            }
+
+            .logo img {
+                height: 30px;
+                margin-right: 10px;
+            }
+
+            .logo-text {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            header nav {
+                padding: 0 10px;
+            }
+
+            footer .container {
+                padding: 0 10px;
+            }
+        }
     </style>
 </head>
 <body>
