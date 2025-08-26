@@ -463,6 +463,43 @@
                 transition: all 0.3s ease;
             }
         }
+		
+		@media (max-width: 768px) {
+            .contact-content {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .contact-form,
+            .contact-info {
+                width: 100%;
+            }
+
+            .contact-info {
+                padding: 1rem;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 15px;
+            }
+
+            .contact-item {
+                padding: 1rem;
+            }
+        }
+		
+		@media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+        }
+		
+		@media (max-width: 768px) {
+            .contact-info h3,
+            .contact-item h4,
+            .contact-item p {
+                text-align: center;
+            }
+        }
     </style>
 	<!-- Google reCAPTCHA API -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
